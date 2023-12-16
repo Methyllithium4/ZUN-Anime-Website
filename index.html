@@ -11,13 +11,46 @@
     <meta charset="utf-8">
     <title></title>
     <link href="css/styles.css" rel="stylesheet" />
+    <style>
+      img.zun_welcome{
+        z-index: -10;
+        width: 80vh;
+        animation-name: appear;
+        animation-duration: 1.5s;
+        position:fixed;
+        bottom: 80pt;
+      }
+
+      @keyframes appear {
+          0% {transform: scale(0%) translateY(180vh);}
+          100% {transform: scale(100%);}
+        }
+      
+        a.side_menu{
+          margin: 2vh;
+          display: inline;
+          color: white; 
+          text-decoration: none;
+          transition: color 0.3s;
+          font-size: larger;
+        }
+
+        a.side_menu:hover{
+          color: rgb(160, 255, 250);
+        }
+
+        a.side_menu:active{
+          color:rgb(233, 230, 48)
+        }
+      
+    </style>
 </head>
 <body class="bg-body-gradient">
   <!-- Navigation bar with logo -->
   <nav class="navbar navbar-expand-lg navbar-light bg-navbar-transparency fixed-top">
     <div class="container-fluid">
         <!-- Navbar brand/logo -->
-        <a class="navbar-brand text-white fs-2" href="#"><img src="images/Zun_anime_logo.PNG" alt="ZUN-Anime" style="width:60px;" class="rounded-pill"> Zürich Universities Anime</a>
+        <a class="navbar-brand text-white" href="#"><img src="images/Zun_anime_logo_labeled.png" alt="ZUN-Anime" style="width:200px;" class="rounded-pill"></a>
 
         <!-- Navbar toggler button for small screens -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,7 +67,7 @@
                   <a class="nav-link text-white fs-2" href="4-koma.html">4-Koma</a>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-white fs-2" href="#" role="button" data-bs-toggle="dropdown">Join Us!</a>
+                <a class="nav-link dropdown-toggle text-white fs-2" href="join-us.html" role="button" data-bs-toggle="dropdown">Join Us!</a>
                 <ul class="dropdown-menu dropdown-menu-end bg-dark">
                       <li><a class="dropdown-item text-white fs-2" href="join-us.html">Follow us on Social Media</a></li>
                       <li><a class="dropdown-item text-white fs-2" href="https://discord.gg/QHxAS48KPp">Join the Community on Discord!</a></li>
@@ -47,56 +80,205 @@
   </nav>
 
   <main class="text-white">
-    <div class="px-4 py-5 my-5 text-center full-height">
-      <img class="d-block mx-auto mb-4" src="images/Zun_welcome.png" alt="" width="300rem" height="300rem">
-      <h1 class="display-5 fw-bold">Welcome to ZUN-Anime</h1>
-      <div class="col-lg-6 mx-auto">
-        <p class="lead mb-4">We are Zürich Universities Anime, short ZUN-Anime. A student association founded in 2023, trying to bring Animanga fans together.</p>
-        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-          <a class="btn btn-mainpage btn-lg px-4 gap-3 text-white align-middle" style="text-decoration: none; color: white; display: block;" href="about-us.html">What is ZUN-Anime?</a> 
-          <a class="btn btn-mainpage btn-lg px-4 text-white align-middle" style="text-decoration: none; color: white; display: block; " href="join-us.html">Join Us!</a> 
+    <div style="height: 80vh; padding-top: 80pt; display: flex; justify-items: center; align-items: center;">
+      <div style="width: 40%; background-color: rgb(28, 43, 50); height: 90%; margin: 5%; display: flex; align-items: center; justify-content:space-around; text-align: center;padding: 6vh; flex-direction: column;">
+        <div>
+          <h1 style="font-size: 5vh;">Welcome to ZUN-Anime!</h1>
+          <p>We are Zürich Universities Anime, short ZUN-Anime. A student association founded in 2023, trying to bring Animanga fans together.</p>
+        </div> 
+        <div>
+          <a class="side_menu" href="to-be-added.html">Activities</a>
+          <a class="side_menu" href="about-us.html">What is ZUN-Anime?</a>
+          <a class="side_menu" href="to-be-added.html">Merch</a>
         </div>
+        <a class="side_menu" style="height: auto; border-width: 2px; border-color: aqua; border-style: solid; text-align: center;padding: 2vh;" href="join-us.html">Join us!</a>
+    </ul>
+      </div>
+      <div style="width: 50%;">
+        <img src="../ZUN-Anime-Website-main/images/Zun_welcome.png" class="zun_welcome">
       </div>
     </div>
-  
-    <div class="b-example-divider"></div>
-  
-    <div class="px-4 pt-5 my-5 text-center full-height">
-      <h1 class="display-4 fw-bold">4-Koma</h1>
-      <div class="col-lg-6 mx-auto">
-        <p class="lead mb-4">Nearly every week, our artist LuluIcey releases a new 4-Koma featuring ETH-Chan in her daily study endeavours. Click on the button below to get to the archive of all past 4-Koma</p>
-        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
-          <a class="btn btn-mainpage btn-lg px-4 gap-3 text-white align-middle" style="text-decoration: none; color: white; display: block;" href="4-koma.html">Archive</a>
-          <a class="btn btn-mainpage btn-lg px-4 text-white align-middle" style="text-decoration: none; color: white; display: block;" href="random-4-koma.html">Random 4-Koma</a> 
-        </div>  
-      </div>
-      <div class="overflow-hidden text-center" style="max-width: 200rem">
-        <div id="koma-carousel" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="images/4Koma/4-koma1.jpeg" alt="4-Koma #1" class="d-block w-100 img-fluid" style="object-fit: contain; height: 50vh;">
+    <div id="particles-js" style="background-color: rgb(28,43,50); width: 100%;height:130%; min-height: 700pt; z-index: -5; position:absolute;"></div>
+
+    <div style="display: flex; justify-content: center; align-items: center; aspect-ratio: 5.25; background-image: url(../ZUN-Anime-Website-main/images/news_thing_bg.png); background-size: 100%;">
+      <h1 style="font-size: 10vh;">News and Events</h1>
+    </div>
+    
+      
+      <div style="display: flex; position:relative">
+        
+        <div style="width: 72%; background-color: rgba(255, 255, 255, 0); z-index: 0;">//*section for news*//</div>
+        <div style=" padding: 15pt; background-color: white; max-width: 20%; min-width: 40pt; display: flex; align-items: center; justify-content: center; flex-wrap: wrap ; margin-top: 5vh;" >
+          <h1 style="color:black; font-size: 6vh;">4-Koma</h1>
+          <div class="overflow-hidden text-center" style="width: 60vh;"> 
+            <div id="koma-carousel" class="carousel slide" data-bs-ride="carousel"> /* starts the section with the carousel*/
+              <div class="carousel-inner" style="padding: 1%">
+                <div class="carousel-item active">
+                    <img src="images/4Koma/4-koma1.jpeg" alt="4-Koma #1" class="d-block w-100 img-fluid" style="object-fit: contain; height: 40vh;">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/4Koma/4-koma2.jpeg" alt="4-Koma #2" class="d-block w-100 img-fluid" style="object-fit: contain; height: 40vh;">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/4Koma/4-koma3.jpeg" alt="4-Koma #3" class="d-block w-100 img-fluid" style="object-fit: contain; height: 40vh;">
+                </div>
+              </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#koma-carousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#koma-carousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
-            <div class="carousel-item">
-                <img src="images/4Koma/4-koma2.jpeg" alt="4-Koma #2" class="d-block w-100 img-fluid" style="object-fit: contain; height: 50vh;">
-            </div>
-            <div class="carousel-item">
-                <img src="images/4Koma/4-koma3.jpeg" alt="4-Koma #3" class="d-block w-100 img-fluid" style="object-fit: contain; height: 50vh;">
-            </div>
+            
           </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#koma-carousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#koma-carousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+          <p style="color:black;font-size: small">Nearly every week, our artist LuluIcey releases a new 4-Koma featuring ETH-Chan in her daily study endeavours</p>
+          <div style="background-color: rgb(122, 177, 186); height: 10vh; width: 30vh; display: flex; align-items: center; justify-content: center;">
+            <a style="text-decoration: none; color: white; font-size: 24pt;" href="4-koma.html">Explore</a>
+          </div>
+        
         </div>
       </div>
+      
+      </div>
+      
+      
     </div>  
     <div class="b-example-divider mb-0"></div>
   </main>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> 
+
+<script>
+
+particlesJS(
+    // this is the ID your particles container needs to have
+	"particles-js",
+  
+  
+// Visit https://vincentgarreau.com/particles.js/ to get your code
+// Paste your code directly underneath this line
+{
+  "particles": {
+    "number": {
+      "value": 63,
+      "density": {
+        "enable": true,
+        "value_area": 800
+      }
+    },
+    "color": {
+      "value": "#faff8e"
+    },
+    "shape": {
+      "type": "polygon",
+      "stroke": {
+        "width": 0,
+        "color": "#000000"
+      },
+      "polygon": {
+        "nb_sides": 3
+      },
+      "image": {
+        "src": "img/github.svg",
+        "width": 100,
+        "height": 100
+      }
+    },
+    "opacity": {
+      "value": 0.6877249100359859,
+      "random": true,
+      "anim": {
+        "enable": false,
+        "speed": 1,
+        "opacity_min": 0.1,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 23.631350925561236,
+      "random": true,
+      "anim": {
+        "enable": false,
+        "speed": 10,
+        "size_min": 2.42987777714781,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": false,
+      "distance": 150,
+      "color": "#ffffff",
+      "opacity": 0.4,
+      "width": 1
+    },
+    "move": {
+      "enable": true,
+      "speed": 1,
+      "direction": "right",
+      "random": true,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false,
+      "attract": {
+        "enable": false,
+        "rotateX": 600,
+        "rotateY": 1200
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "repulse"
+      },
+      "onclick": {
+        "enable": true,
+        "mode": "push"
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 20,
+        "line_linked": {
+          "opacity": 1
+        }
+      },
+      "bubble": {
+        "distance": 400,
+        "size": 40,
+        "duration": 2,
+        "opacity": 8,
+        "speed": 3
+      },
+      "repulse": {
+        "distance": 120,
+        "duration": 0.9
+      },
+      "push": {
+        "particles_nb": 4
+      },
+      "remove": {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": true
+}
+
+
+
+
+)
+
+</script>
 </body>
 </html>

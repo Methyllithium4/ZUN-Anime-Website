@@ -3,12 +3,18 @@ body {
 }
 
 .bg-navbar-transparency {
-    background: linear-gradient(0deg, rgba(33, 112, 128, 0.2) 0%, rgba(33, 112, 128, 0.7) 50%, rgba(33, 112, 128, 0.8) 100%)
+    background-color: rgba(23, 69, 78, 0.4);
+    backdrop-filter: blur(15px);
+    
   }
 
 .bg-body-gradient{
+    background-image:url(../images/white_bg.jpg);
+    background-attachment: fixed;
+    /*
     background: rgb(2,1,25);
     background: linear-gradient(0deg, rgba(2,1,25,1) 0%, rgba(12,61,75,1) 50%, rgba(164,238,228,1) 100%);
+    */
 }
 
 .btn-mainpage{
